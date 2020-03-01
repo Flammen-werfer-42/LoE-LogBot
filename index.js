@@ -6,9 +6,9 @@ let request = require('request');
 
 // STARTUP MESSAGE AND SET THE PLAYING MESSAGE
 bot.on('ready', () =>{
-    console.log("Locked, cocked, and ready to rock.");
+    console.log("Working");
     bot.user.setActivity("LogBot knows what you did");
-    bot.user.setAvatar("https://i.imgur.com/D5GBvNZ.png")
+    bot.user.setAvatar("image.jpg")
 });
  
 //MAKE THE BOT RESOND TO A SPECIFIC PHRASE
