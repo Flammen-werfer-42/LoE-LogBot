@@ -31,8 +31,11 @@ bot.on('message', msg => {
             var test = msg.content;
             if(test.includes('@') && !test.includes('#'))  //@ USED NOT #
             {
+                    try {
              var logmsg = `\n-Channel: ${msg.channel.name} Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content} --Pic: ${msg.attachments.first().url} --User Mentioned: ${msg.mentions.members.first().displayName}`;
-            
+                    }
+                    catch(err) 
+                   {var logmsg = `\n-Channel: ${msg.channel.name} --Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content}`;}
              //WRITE TO FILE
              fs.appendFile('loeLogs.txt', logmsg, function (err) 
              {
@@ -44,8 +47,11 @@ bot.on('message', msg => {
             } 
             else if(test.includes('#') && !test.includes('@'))    // # USED NOT @
             {
+                    try {
                 var logmsg = `\n-Channel: ${msg.channel.name} Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content} --Pic: ${msg.attachments.first().url} --Channel Mentioned: ${msg.mentions.channels.first().name}`;
-            
+                       }
+                     catch(err) 
+                     {var logmsg = `\n-Channel: ${msg.channel.name} --Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content}`;}
                 //WRITE TO FILE
                 fs.appendFile('loeLogs.txt', logmsg, function (err) 
                 {
@@ -57,8 +63,11 @@ bot.on('message', msg => {
             }
             else if (test.includes('#') && test.includes('@'))   // # AND @ USED
             {
+                    try {
                 var logmsg = `\n-Channel: ${msg.channel.name} Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content} --Pic: ${msg.attachments.first().url} --User Mentioned: ${msg.mentions.members.first().displayName} --Channel Mentioned: ${msg.mentions.channels.first().name}`;
-            
+                        }
+                       catch(err) 
+                      {var logmsg = `\n-Channel: ${msg.channel.name} --Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content}`;}
                 //WRITE TO FILE
                 fs.appendFile('loeLogs.txt', logmsg, function (err) 
                 {
@@ -87,8 +96,11 @@ bot.on('message', msg => {
         var test = msg.content;
         if(test.includes('@') && !test.includes('#'))       // @ USED NOT #
         {
+            try {
          var logmsg = `\n-Channel: ${msg.channel.name} --Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content} --User Mentioned: ${msg.mentions.members.first().displayName}`;
-        
+            }
+            catch(err) 
+            {var logmsg = `\n-Channel: ${msg.channel.name} --Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content}`;}
          fs.appendFile('loeLogs.txt', logmsg, function (err) 
          {
             if (err) throw err;
@@ -99,8 +111,11 @@ bot.on('message', msg => {
         } 
         else if(test.includes('#') && !test.includes('@')) // # USED NOT @
         {
+                try {
             var logmsg = `\n-Channel: ${msg.channel.name} Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content} --Channel Mentioned: ${msg.mentions.channels.first().name}`;
-            
+                }
+                catch(err) 
+                {var logmsg = `\n-Channel: ${msg.channel.name} --Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content}`;}
                 //WRITE TO FILE
             fs.appendFile('loeLogs.txt', logmsg, function (err) 
             {
@@ -112,8 +127,11 @@ bot.on('message', msg => {
         }
         else if (test.includes('#') && test.includes('@'))   // # AND @ USED
         {
+                try {
             var logmsg = `\n-Channel: ${msg.channel.name} Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content} --User Mentioned: ${msg.mentions.members.first().displayName} --Channel Mentioned: ${msg.mentions.channels.first().name}`;
-            
+                }
+                catch(err) 
+                {var logmsg = `\n-Channel: ${msg.channel.name} --Time: ${msg.createdAt} \n----Author: ${msg.author.tag} --Message: ${msg.content}`;}
             //WRITE TO FILE
             fs.appendFile('loeLogs.txt', logmsg, function (err) 
             {
