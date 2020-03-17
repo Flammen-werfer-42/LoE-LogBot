@@ -8,7 +8,7 @@ let request = require('request');
 bot.on('ready', () =>{
     console.log("Working");
     bot.user.setActivity("LogBot knows what you did");
-    bot.user.setAvatar("image.jpg")
+    bot.user.setAvatar("use a url here to change the bot's pfp")
 });
  
 //MAKE THE BOT RESOND TO A SPECIFIC PHRASE
