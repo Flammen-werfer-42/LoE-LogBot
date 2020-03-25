@@ -1,14 +1,14 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
- const token = 'XXX';
+ const token = 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX';
 var fs = require('fs');
 let request = require('request');
 
 // STARTUP MESSAGE AND SET THE PLAYING MESSAGE
 bot.on('ready', () =>{
-    console.log("Working");
+    console.log("BOT IS OPERATIONAL");
     bot.user.setActivity("LogBot knows what you did");
-    bot.user.setAvatar("use a url here to change the bot's pfp")
+    bot.user.setAvatar("< use a url here to change the bot's pfp >")
 });
  
 //MAKE THE BOT RESOND TO A SPECIFIC PHRASE
